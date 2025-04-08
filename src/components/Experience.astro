@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Desarrollador Frontend",
+    company: "Freelance",
+    description: 
+  "Desarrollador frontend enfocado en crear landing pages y one pages modernas, rápidas y accesibles. Utilizo tecnologías como Vite.js, Tailwind CSS, HTML, y JavaScript para construir experiencias web a medida, optimizadas para rendimiento y usabilidad.",
+    //link: "https://twitch.tv/midudev",
+  },
+  {
+  date: "Febrero 2024 - Julio 2024",
+  title: "Pasante en Desarrollo Frontend",
+  company: "Estudio Creativo Lumen",
+  description:
+    "Colaboré en el diseño de interfaces utilizando Figma y participé en el desarrollo de componentes frontend para aplicaciones internas. Asistí en la implementación de buenas prácticas de diseño responsivo y ayudé a integrar prototipos en entornos web utilizando tecnologías como HTML, CSS y JavaScript.",
+},
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
