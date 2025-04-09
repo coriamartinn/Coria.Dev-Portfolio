@@ -1,16 +1,16 @@
 ---
-import "@fontsource-variable/onest"
+import "@fontsource-variable/onest";
 
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
-import { ViewTransitions } from "astro:transitions"
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
-const { description, title } = Astro.props
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,6 +22,19 @@ const { description, title } = Astro.props
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <!-- Metaetiquetas Open Graph -->
+    <meta property="og:title" content="Mi Porfolio - Martin Coria" />
+    <meta
+      property="og:description"
+      content="Desarrollador de Software y Tecnico en programación de Buenos Aires, Argentina 🇦🇷. Especializado en el desarrollo de aplicaciones web y softwares unicos."
+    />
+    <meta
+      property="og:image"
+      content="https://coriadev-porfolio.netlify.app/porfolio.webp"
+    />
+    <meta property="og:url" content="https://coriadev-porfolio.netlify.app/" />
+    <meta property="og:type" content="website" />
     <ViewTransitions />
   </head>
 
